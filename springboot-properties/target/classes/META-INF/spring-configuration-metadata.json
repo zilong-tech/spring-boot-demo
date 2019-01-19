@@ -1,0 +1,60 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.demo.property.HomeProperties",
+      "name": "home",
+      "type": "com.demo.property.HomeProperties"
+    },
+    {
+      "sourceType": "com.demo.property.UserProperties",
+      "name": "user",
+      "type": "com.demo.property.UserProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.demo.property.HomeProperties",
+      "name": "home.city",
+      "description": "城市",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.demo.property.HomeProperties",
+      "name": "home.desc",
+      "description": "描述",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.demo.property.HomeProperties",
+      "name": "home.province",
+      "description": "省份",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.demo.property.UserProperties",
+      "defaultValue": 0,
+      "name": "user.age",
+      "description": "年龄",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.demo.property.UserProperties",
+      "name": "user.desc",
+      "description": "用户名称",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.demo.property.UserProperties",
+      "name": "user.id",
+      "description": "用户 ID",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.demo.property.UserProperties",
+      "name": "user.uuid",
+      "description": "用户 UUID",
+      "type": "java.lang.String"
+    }
+  ]
+}
