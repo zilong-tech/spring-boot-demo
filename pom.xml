@@ -13,6 +13,9 @@
         <module>springboot-properties</module>
         <module>springboot-validation-over-json</module>
         <module>springboot-restful</module>
+        <module>springboot-rabbitMQ</module>
     </modules>
+
+
 
 </project>
