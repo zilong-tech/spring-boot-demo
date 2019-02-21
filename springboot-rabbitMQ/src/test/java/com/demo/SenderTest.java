@@ -1,5 +1,7 @@
 package com.demo;
 
+import com.demo.hello.Sender;
+import com.demo.pojo.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,5 +19,13 @@ public class SenderTest {
     @Test
     public void send() {
         sender.send();
+    }
+
+    @Test
+    public void sendObject(){
+        User user = new User();
+        user.setName("朱元璋");
+        user.setAge("40");
+        sender.sendObject(user);
     }
 }
