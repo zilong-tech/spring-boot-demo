@@ -1,5 +1,7 @@
-package com.demo;
+package com.demo.hello;
 
+import com.demo.config.RabbitConfigure;
+import com.demo.pojo.User;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +23,10 @@ public class Sender {
 
     public void send(){
         String context = "hello" + new Date();
-        amqpTemplate.convertAndSend("hello",context);
+        amqpTemplate.convertAndSend(RabbitConfigure.SPRING_BOOT_EXCHANGE,RabbitConfigure.SPRING_BOOT_BIND_KEY,context);
+    }
+
+    public void sendObject(User user){
+        amqpTemplate.convertAndSend(RabbitConfigure.SPRING_BOOT_EXCHANGE,RabbitConfigure.SPRING_BOOT_BIND_KEY,user);
     }
 }
