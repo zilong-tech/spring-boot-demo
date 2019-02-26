@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mail" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-helloworld" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitMQ" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-restful" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-validation-over-json" charset="UTF-8" />
   </component>

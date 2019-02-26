@@ -21,7 +21,7 @@ public class Receiver {
 
     @RabbitHandler
     public void process(String msg){
-        System.out.println("收到消息："+ msg);
+        System.out.println("Receiver收到消息："+ msg);
     }
 
     @RabbitHandler

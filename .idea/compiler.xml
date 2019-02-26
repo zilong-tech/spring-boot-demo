@@ -6,6 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mail" />
+        <module name="springboot-helloworld" />
+        <module name="springboot-properties" />
+        <module name="springboot-rabbitMQ" />
         <module name="springboot-restful" />
         <module name="springboot-validation-over-json" />
         <module name="springboothelloworld" />

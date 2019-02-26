@@ -1,0 +1,11 @@
+spring:
+  mail:
+    host: smtp.163.com #邮箱服务器地址
+    username: zysspace@163.com
+    password: myouth1qaz #是开通pop3/smtp服务时所给的授权码，而不是你注册邮箱时的真实密码
+    default-encoding: utf-8
+    protocol: smtp
+
+mail:
+  fromMail:
+    addr: zysspace@163.com
