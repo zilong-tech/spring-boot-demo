@@ -16,6 +16,7 @@
         <module>springboot-rabbitMQ</module>
         <module>mail</module>
         <module>websocket</module>
+        <module>uploadfile</module>
     </modules>
 
 
