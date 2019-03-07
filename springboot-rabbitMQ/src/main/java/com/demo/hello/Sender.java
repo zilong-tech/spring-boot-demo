@@ -1,7 +1,6 @@
 package com.demo.hello;
 
-import com.demo.config.RabbitConfigure;
-import com.demo.config.TopicRabbitConfig;
+import com.demo.RabbitConfigure;
 import com.demo.pojo.User;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.stereotype.Component;

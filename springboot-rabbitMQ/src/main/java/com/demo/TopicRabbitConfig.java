@@ -1,4 +1,4 @@
-package com.demo.config;
+package com.demo;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
