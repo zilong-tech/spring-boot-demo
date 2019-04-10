@@ -9,6 +9,7 @@
     <result column="salt" property="salt" jdbcType="VARCHAR" />
     <result column="state" property="state" jdbcType="INTEGER" />
   </resultMap>
+
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -92,6 +93,26 @@
       limit #{startRow} , #{pageSize}
     </if>
   </select>
+
+  <resultMap id="userRoleInfo" type="com.demo.model.UserInfo">
+    <id column="id" property="id" jdbcType="INTEGER"></id>
+    <collection property="roleList" column="role_id" ofType="com.demo.model.Role" select="selectRole"></collection>
+  </resultMap>
+  <resultMap id="roleInfo" type="com.demo.model.Role">
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="role" property="role" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="available" property="available" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <select id="selectRole" resultMap="roleInfo">
+    select * from role where id = #{role_id,jdbcType=INTEGER};
+  </select>
+
+  <select id="selectUserInfo"  parameterType="java.lang.String" resultMap="userRoleInfo" >
+    SELECT u.*, r.id role_id from user_info u LEFT JOIN user_role r on u.id = r.user_id where username = #{username,jdbcType=VARCHAR}
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     id,username,name,password,salt,state

@@ -15,7 +15,7 @@ public class PasswordUtil {
     public static void main(String[] args) {
 
         //盐值用的用的是对用户名的加密（测试用的"lisi"）
-        ByteSource credentialsSalt01 = ByteSource.Util.bytes("admin");
+        ByteSource credentialsSalt01 = ByteSource.Util.bytes("test");
         Object salt = null;//盐值
         Object credential = "123456";//密码
         String hashAlgorithmName = "MD5";//加密方式

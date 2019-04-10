@@ -13,11 +13,10 @@
         <module name="springboot-rabbitMQ" />
         <module name="springboot-restful" />
         <module name="springboot-validation-over-json" />
-        <module name="springboothelloworld" />
-        <module name="springbootproperties" />
         <module name="uploadfile" />
         <module name="websocket" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

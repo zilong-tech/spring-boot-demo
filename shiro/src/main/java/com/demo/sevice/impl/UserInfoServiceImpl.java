@@ -18,11 +18,12 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public UserInfo findByUsername(String username) {
         System.out.println("UserInfoServiceImpl.findByUsername()");
-        UserInfoQuery userInfoQuery = new UserInfoQuery();
-        userInfoQuery.createCriteria().andUsernameEqualTo(username);
-        List<UserInfo> userInfoList = userInfoDao.selectByExample(userInfoQuery);
-        if(userInfoList.size()>0){
-            return userInfoList.get(0);
+//        UserInfoQuery userInfoQuery = new UserInfoQuery();
+//        userInfoQuery.createCriteria().andUsernameEqualTo(username);
+//        List<UserInfo> userInfoList = userInfoDao.selectByExample(userInfoQuery);
+        UserInfo userInfo = userInfoDao.selectUserInfo(username);
+        if(userInfo != null){
+            return userInfo;
         }
         return null;
 

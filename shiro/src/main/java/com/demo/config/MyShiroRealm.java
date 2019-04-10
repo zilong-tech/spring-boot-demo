@@ -44,38 +44,22 @@ public class MyShiroRealm extends AuthorizingRealm {
     @Resource
     private PermissionDao permissionDao;
 
+    /**
+     * 权限信息，包括角色以及权限
+     * @param principals
+     * @return
+     */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-
         System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        UserInfo userInfo = null;
-        userInfo = (UserInfo)principals.getPrimaryPrincipal();
-
-        UserRoleQuery userRoleQuery = new UserRoleQuery();
-        userRoleQuery.createCriteria().andUserIdEqualTo(userInfo.getId());
-        List<UserRole> userRoleList = userRoleDao.selectByExample(userRoleQuery);
-        if(userRoleList.size()>0){
-            userRoleList.stream().forEach(userRole -> {
-                RoleQuery roleQuery = new RoleQuery();
-                roleQuery.createCriteria().andIdEqualTo(userRole.getRoleId());
-                List<Role> roleList = roleDao.selectByExample(roleQuery);
-                authorizationInfo.addRole(roleList.get(0).getRole());
-                RolePermissionQuery rolePermissionQuery = new RolePermissionQuery();
-                rolePermissionQuery.createCriteria().andRoleIdEqualTo(userRole.getRoleId());
-                List<RolePermission> rolePermissionList = rolePermissionDao.selectByExample(rolePermissionQuery);
-                List<Integer> permissionIdList = rolePermissionList.stream().map(RolePermission::getId).collect(Collectors.toList());
-
-                PermissionQuery permissionQuery = new PermissionQuery();
-                permissionQuery.createCriteria().andIdIn(permissionIdList);
-                List<Permission> permissionList = permissionDao.selectByExample(permissionQuery);
-
-                for(Permission p : permissionList){
-                    authorizationInfo.addStringPermission(p.getPermission());
-                }
-            });
+        UserInfo userInfo  = (UserInfo)principals.getPrimaryPrincipal();
+        for(Role role:userInfo.getRoleList()){
+            authorizationInfo.addRole(role.getRole());
+            for(Permission p:role.getPermissions()){
+                authorizationInfo.addStringPermission(p.getPermission());
+            }
         }
-
         return authorizationInfo;
     }
 
@@ -102,4 +86,5 @@ public class MyShiroRealm extends AuthorizingRealm {
         );
         return authenticationInfo;
     }
+
 }

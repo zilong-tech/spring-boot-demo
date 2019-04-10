@@ -2,6 +2,7 @@ package com.demo.controllor;
 
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,6 +11,7 @@ import java.util.Map;
 
 @Controller
 public class HomeController {
+
     @RequestMapping({"/","/index"})
     public String index(){
         return"/index";

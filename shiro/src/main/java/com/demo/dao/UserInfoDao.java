@@ -19,6 +19,8 @@ public interface UserInfoDao {
 
     List<UserInfo> selectByExample(UserInfoQuery example);
 
+    UserInfo selectUserInfo(String username);
+
     UserInfo selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") UserInfo record, @Param("example") UserInfoQuery example);
