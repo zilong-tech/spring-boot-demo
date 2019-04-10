@@ -9,6 +9,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-restful/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-validation-over-json/pom.xml" />
       </list>
     </option>
   </component>
