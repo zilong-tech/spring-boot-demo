@@ -17,6 +17,7 @@
         <module>mail</module>
         <module>websocket</module>
         <module>uploadfile</module>
+        <module>shiro</module>
     </modules>
 
 

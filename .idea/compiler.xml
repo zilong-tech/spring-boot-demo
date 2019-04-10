@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mail" />
+        <module name="shiro" />
         <module name="springboot-helloworld" />
         <module name="springboot-properties" />
         <module name="springboot-rabbitMQ" />
@@ -16,5 +17,6 @@
         <module name="websocket" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
