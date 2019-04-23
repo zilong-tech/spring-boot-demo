@@ -2,7 +2,7 @@ spring:
     datasource:
       url: jdbc:mysql://localhost:3306/test
       username: root
-      password: 123456789
+      password: 12345678
       driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
 

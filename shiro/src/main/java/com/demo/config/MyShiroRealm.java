@@ -15,18 +15,20 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Description:
+ * Description: 自定义实现 ShiroRealm，包含认证和授权两大模块
  * <p>
  * Create on 2019/03/01
  *
  * @author zouyongsheng
  */
+@Component
 public class MyShiroRealm extends AuthorizingRealm {
 
     @Resource

@@ -18,6 +18,7 @@
         <module>websocket</module>
         <module>uploadfile</module>
         <module>shiro</module>
+        <module>spring-security</module>
     </modules>
 
 
