@@ -1,4 +1,4 @@
-package com.demo.Controller;
+package com.demo.controller;
 
 import com.demo.model.Message;
 import org.springframework.messaging.handler.annotation.MessageMapping;

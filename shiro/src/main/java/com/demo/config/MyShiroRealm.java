@@ -1,11 +1,13 @@
 package com.demo.config;
 
+import com.demo.model.Permission;
+import com.demo.model.Role;
+import com.demo.model.UserInfo;
+import com.demo.sevice.UserInfoService;
 import com.demo.dao.PermissionDao;
 import com.demo.dao.RoleDao;
 import com.demo.dao.RolePermissionDao;
 import com.demo.dao.UserRoleDao;
-import com.demo.model.*;
-import com.demo.sevice.UserInfoService;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -18,8 +20,6 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Description: 自定义实现 ShiroRealm，包含认证和授权两大模块

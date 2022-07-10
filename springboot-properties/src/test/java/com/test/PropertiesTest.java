@@ -3,7 +3,6 @@ package com.test;
 import com.demo.Application;
 import com.demo.property.HomeProperties;
 import com.demo.property.UserProperties;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

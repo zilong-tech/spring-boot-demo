@@ -1,13 +1,11 @@
 package com.demo.sevice.impl;
 
+import com.demo.sevice.UserInfoService;
 import com.demo.dao.UserInfoDao;
 import com.demo.model.UserInfo;
-import com.demo.model.UserInfoQuery;
-import com.demo.sevice.UserInfoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @Service
 public class UserInfoServiceImpl implements UserInfoService {

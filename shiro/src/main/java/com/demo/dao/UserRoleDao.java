@@ -1,7 +1,7 @@
 package com.demo.dao;
 
-import com.demo.model.UserRole;
 import com.demo.model.UserRoleQuery;
+import com.demo.model.UserRole;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

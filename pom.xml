@@ -19,6 +19,9 @@
         <module>uploadfile</module>
         <module>shiro</module>
         <module>spring-security</module>
+        <module>springboot-redis</module>
+        <module>springboot-mybatis/annotation-mulidatasource</module>
+
     </modules>
 
 
