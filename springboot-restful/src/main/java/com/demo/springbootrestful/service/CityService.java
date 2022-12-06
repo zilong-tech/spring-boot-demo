@@ -44,4 +44,7 @@ public interface CityService {
      * @return
      */
     Long deleteCity(Long id);
+
+
+    void retry(int code) throws Exception;
 }

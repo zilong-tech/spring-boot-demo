@@ -58,4 +58,9 @@ public class CityController {
     public void modifyCity(@PathVariable("id") Long id) {
         cityService.deleteCity(id);
     }
+
+    @RequestMapping(value = "/test")
+    public void test(int code) throws Exception {
+         cityService.retry(code);
+    }
 }
