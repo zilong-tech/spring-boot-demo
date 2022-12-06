@@ -2,7 +2,6 @@ package com.demo.domain;
 
 import java.io.Serializable;
 
-
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -10,6 +9,7 @@ public class User implements Serializable {
 	private String userName;
 	private String passWord;
 	private String nickName;
+	private String userSex;
 
 	public User() {
 		super();
@@ -41,7 +41,13 @@ public class User implements Serializable {
 		this.passWord = passWord;
 	}
 
+	public String getUserSex() {
+		return userSex;
+	}
 
+	public void setUserSex(String userSex) {
+		this.userSex = userSex;
+	}
 
 	public String getNickName() {
 		return nickName;

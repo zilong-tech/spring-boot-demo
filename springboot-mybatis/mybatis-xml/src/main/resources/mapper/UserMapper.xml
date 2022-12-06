@@ -25,6 +25,19 @@
         WHERE id = #{id}
     </select>
 
+    <select id="getUsers" resultMap="BaseResultMap" fetchSize="1000" resultSetType="FORWARD_ONLY">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM users
+        where id > #{id}
+    </select>
+    <select id="selectUsers" resultType="com.demo.domain.User" parameterType="java.lang.Integer">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM users
+        where id > #{id}
+    </select>
+
     <insert id="insert" parameterType="com.demo.domain.User" >
         INSERT INTO
         users

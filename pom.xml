@@ -11,7 +11,7 @@
     <modules>
         <module>springboot-helloworld</module>
         <module>springboot-properties</module>
-        <module>springboot-validation-over-json</module>
+        <module>springboot-validation</module>
         <module>springboot-restful</module>
         <module>springboot-rabbitMQ</module>
         <module>mail</module>

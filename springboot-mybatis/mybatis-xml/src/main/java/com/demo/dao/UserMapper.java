@@ -2,6 +2,7 @@ package com.demo.dao;
 
 
 import com.demo.domain.User;
+import org.apache.ibatis.session.ResultHandler;
 
 import java.util.List;
 
@@ -16,5 +17,9 @@ public interface UserMapper {
 	void update(User user);
 
 	void delete(Long id);
+
+	List<User>  getUsers(Integer id);
+
+	List<User> selectUsers(Integer id);
 
 }

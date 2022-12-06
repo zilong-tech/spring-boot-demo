@@ -22,7 +22,15 @@ public class ApplicationTest {
     @Test
     public void test(){
 
-        User user = userService.getUser(1L);
-        System.out.println(user);
+        User user = new User();
+        user.setUserName("1234");
+
+        userService.save(user);
+    }
+
+    @Test
+    public void test1(){
+        userService.getUserList();
+
     }
 }
