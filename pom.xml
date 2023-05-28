@@ -23,6 +23,8 @@
         <module>springboot-mybatis/annotation-mulidatasource</module>
         <module>springboot-swagger</module>
         <module>event</module>
+        <module>SPI</module>
+        <module>springboot-ES</module>
 
     </modules>
 
