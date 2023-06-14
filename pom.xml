@@ -25,6 +25,7 @@
         <module>event</module>
         <module>SPI</module>
         <module>springboot-ES</module>
+        <module>springboot-mybatis-plus</module>
 
     </modules>
 
