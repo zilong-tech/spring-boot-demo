@@ -1,0 +1,33 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8088
+
+jetcache:
+  # 统计间隔，0表示不统计
+  statIntervalMinutes: 15
+  # 是否把cacheName作为远程缓存key前缀
+  areaInCacheName: false
+  # 本地缓存配置
+  local:
+    default: # default表示全部生效，也可以指定某个cacheName
+      # 本地缓存类型，其他可选：caffeine/linkedhashmap
+      type: linkedhashmap
+      keyConvertor: fastjson
+  # 远程缓存配置
+  remote:
+    default:
+      type: redis
+#      # key转换器方式
+      keyConvertor: fastjson
+      broadcastChannel: projectA
+#      # redis序列化方式
+      valueEncoder: java
+      valueDecoder: java
+#      # redis线程池
+      poolConfig:
+        minIdle: 5
+        maxIdle: 20
+        maxTotal: 50
+      # redis地址与端口
+      host: 127.0.0.1
+      port: 6379
